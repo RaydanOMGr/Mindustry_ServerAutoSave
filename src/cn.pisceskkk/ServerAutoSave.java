@@ -201,7 +201,7 @@ public class ServerAutoSave extends Plugin{
     }
 
     private void saveGame(String suffix){
-        if(!Vars.state.is(GameState.State.playing) || Vars.state.serverPaused == true){
+        if(!Vars.state.isPlaying() || Vars.state.isPaused()){
             return;
         }
         Date dNow = new Date();
